@@ -2,19 +2,31 @@ package io.zipcoder.polymorphism;
 
 import java.util.Scanner;
 
-/*
-Create a program that asks the user how many pets they have.
-Once you know how many pets they have, ask them what kind of pet each one is,
-along with each pet's name. For now your program should just hold onto the user input
-and print out the list at the end; we'll modify this in part 3.
- */
-public class Pet {
-    public static void main(String[] args) {
-        Scanner userInput = new Scanner(System.in);
-        System.out.println("Enter how many pets you have:");
+public  class PetHouse {
 
-        int numOfPets = 0;
+        public static void main(String args[]) {
 
-        System.out.println("What is the name of animal number " + numOfPets);
+
+            double userInput;
+            int x;
+            String input;
+
+
+            Scanner scan = new Scanner(System.in);
+            System.out.println("How many pets do you have:");
+            userInput = scan.nextDouble();
+
+            while (true) {
+                for (x = 1; x <= userInput; x++) {
+
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.println("What kind of pet is pet # " + x + "?");
+                   input = scanner.next();
+                    System.out.println("Please enter the name of pet # " + x + ":");
+                    input = scanner.next();
+
+                }
+                break;
+            }
+        }
     }
-}
